@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수</title>
+</head>
+<body>
+    <!-- 입력, 할일, 출력 -->
+    <h1>함수</h1> 
+    <script>
+        function send(){
+            alert('경고');
+        }
+        // send();
+
+        // 전역변수
+        var a = 10;
+        var b = 20;
+        
+        var total = add(a, b);
+        document.write(total);
+        
+        // var sum = add(a, b); // add 함수의 return 주석 O - undefined, 주석 X - sum에 저장된 값 출력
+        // document.write(sum);
+        
+        // 함수는 위치 상관 X
+        function add(x, y){
+            // 지역변수
+            // var c = a + b;
+            var sum = x + y;
+            return sum; // sum 변수 안에 들어가있는 값 return
+        }
+    </script>
+
+    <h2>Object 객체</h2>
+    <script>
+        // 객체 = 변수 + 함수
+        /*
+            var obj = new Object(); 첫번째 방법
+            var obj = {}; 두번째 방법
+        */
+
+        /*
+        var baby = {};
+        baby.age = "2살";
+        baby.sex = "남자";
+        baby.birthday = "8월 24일";
+        */
+
+        var baby = {
+            // property
+            age : "1살",
+            sex : "여자",
+            birthday : "8월8일",
+
+            // function
+            // getAge : function(){
+            //     return this.age;
+            // }
+            getAge : getAge
+        }
+
+        function getAge(){
+            return this.age;
+        }
+
+        var age = baby.getAge();
+        document.write(age);
+
+        /*
+        document.write(baby.age);
+        document.write(baby.sex);
+        document.write(baby.birthday);
+        */
+    </script>
+</body>
+</html>
