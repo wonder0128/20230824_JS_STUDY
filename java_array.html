@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열</title>
+</head>
+<body>
+    
+    <h2>배열</h2>
+    <script>
+        /*
+            배열 만들기
+            var arr = [];
+            var arr = new Array();
+
+            배열은 index값이 0번이 첫번째  
+        */
+
+        /*
+        var fruits = [];
+        fruits[0] = '사과';
+        fruits[1] = '배';
+        fruits[2] = '바나나';
+        document.write(fruits);
+        */
+
+        var fruits = ['사과', '배', '바나나', '딸기'];
+        var animals = ['사자', '호랑이', '곰'];
+
+        var amount = fruits.length;
+        var newStr = fruits.join('/');
+        var newArr = fruits.reverse();
+        var newArr2 = fruits.sort(function(a, b){
+            return b-a;
+        });
+        var newArr3 = fruits.concat(animals);
+        var newArr4 = fruits.slice(1,3); // 원본 유지, 1번째부터 3번째 이전
+        var newArr5 = fruits.splice(1,3); // 원본 손상, 1번째부터 3번째까지
+
+        document.write(fruits + '<br/>');
+        document.write(fruits[0] + '<br/>');
+        document.write(amount + '<br/>');
+        document.write(newStr + '<br/>');
+        document.write(newArr + '<br/>');
+        document.write(newArr2 + '<br/>');
+        document.write(newArr3 + '<br/>');
+        document.write(newArr4 + '<br/>');
+        document.write(newArr5 + '<br/>');
+
+    </script>
+
+    <h2>값 추가하기 - push</h2>
+    <p>기존의 값 뒤에 추가한다.</p>
+    <script>
+        var beers = ['하이네켄', '코로나', '스텔라', '카스'];
+        beers.push('수제맥주', '켈리');
+        document.write(beers);
+    </script>
+
+    <h2>값 추가하기 - unshift</h2>
+    <p>기존의 값 앞에 추가한다.</p>
+    <script>
+        var beers = ['하이네켄', '코로나', '스텔라', '카스'];
+        beers.unshift('수제맥주', '켈리');
+        document.write(beers);
+    </script>
+
+    <h2>값 삭제하기 - pop</h2>
+    <p>기존의 맨 뒤 값을 삭제한다.</p>
+    <script>
+        var beers = ['하이네켄', '코로나', '스텔라', '카스'];
+        beers.pop();
+        document.write(beers);
+    </script>
+
+    <h2>값 삭제하기 - shift</h2>
+    <p>기존의 맨 앞 값을 삭제한다.</p>
+    <script>
+        var beers = ['하이네켄', '코로나', '스텔라', '카스'];
+        beers.shift();
+        document.write(beers);
+    </script>
+
+    <h2>문자열</h2>
+    <script>
+        var str = 'hello world';
+        var str1 = 'javascript';
+        // var str2 = str.indexOf('world');
+        var str2 = str.indexOf('worlds'); // -1이 출력(원하는 문자열 포함 X)
+
+        var newStr1 = str.concat(str1);
+        var n = str.charAt(2);
+        // alert(n);  
+        console.log(n);
+        console.log(newStr1);
+        console.log(str2);
+    </script>
+</body>
+</html>

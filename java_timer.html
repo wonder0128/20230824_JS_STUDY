@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>타이머</title>
+</head>
+<body>
+    <h2>타이머</h2>
+    <script>
+        // setTimeout(할 일, 시간);
+        // 시간이 지나면 할 일 = 함수
+        // 할 일 = function(){실제로 할 일}
+        // 3초 -> 3000
+        // 실제로 할 일 = alert('배고파여');
+
+        // clearTimeout(할 일의 이름);
+
+        var timer = setTimeout(function(){
+            alert('배고파요');
+        },3000);
+
+        clearTimeout(timer);
+        /* 일정시간마다 할 일 */
+        /*
+            setInterval(할 일, 시간);
+            claerInterval(할 일의 이름);
+        */
+        var timer2 = setInterval(function(){
+            alert('배고파요');
+        }, 3000);
+        
+        clearInterval(timer2);
+    </script>
+</body>
+</html>
